@@ -1,0 +1,58 @@
+
+body, html{
+    background-color: hsl(0, 53%, 60%)  !important; /* Cambia esto por el color que quieras */
+    color: white; /* Cambia el color del texto para que sea visible */
+    margin: 0;
+    padding-top: 30px;
+    height: 100%;
+   
+}
+
+.titulo{
+    font-size: 1.5rem;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 40px;
+}
+.navbar {
+    background-color: rgba(255, 255, 255, 0.1); /* Transparente */
+    height: 80px;
+    font-size: 1.1rem;
+    z-index: 1000;}
+
+.navbar .navbar-brand {
+    font-size: 1.5rem; /* Tamaño más grande para el logo */
+}
+.navbar-nav .nav-link {
+    font-size: 1.2rem; /* Aumenta tamaño de los enlaces */
+    padding: 10px 15px;
+    color: rgb(236, 5, 5) !important; /* Asegura que el texto sea visible */
+}
+.navbar-toggler {
+    border: none;
+}
+
+.navbar-nav .nav-link:hover  {
+    color: #f8d210 !important; /* Amarillo */
+}
+.navbar-brand:hover  {
+    color: #f8d210 !important; /* Amarillo */
+}
+.card-body{
+    background-color: #badddd;
+   
+}
+
+.table-bordered thead th { 
+    border: 1px solid #5e5c5c;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 13px;
+}
+.table-bordered td{
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 13px;
+
+}
+

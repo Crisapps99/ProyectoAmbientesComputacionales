@@ -1,0 +1,91 @@
+
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-lg-6 offset-lg-3">
+            <div class="card">
+                <div class="card-body">
+                    <span class="titulo"> {{titulo |uppercase}} </span>
+                    <form class="mt-3" [formGroup]="notaForm" (ngSubmit)="agregarNota()" >
+                        <div class="mb-3">
+                            <input type="text" formControlName="nombre"
+                            class="form-control form-control-lg" placeholder="Nombre">
+                            <div class="text-danger"
+                                *ngIf="notaForm.get('nombre')?.hasError('required') && notaForm.get('nombre')?.touched">
+                                <span>el nombre del estudiante es <strong>obligatorio</strong>   </span>
+                            </div>
+                        </div>  
+                        <div class="mb-3">
+                            <input type="text" formControlName="curso"
+                            class="form-control form-control-lg" placeholder="curso">
+                            <div class="text-danger"
+                                *ngIf="notaForm.get('curso')?.hasError('required') && notaForm.get('curso')?.touched">
+                                <span>el curso del estudiante es <strong>obligatorio</strong>   </span>
+                            </div>
+                        </div>  
+                        <div class="mb-3">
+                            <input type="text" formControlName="paralelo"
+                            class="form-control form-control-lg" placeholder="paralelo">
+                            <div class="text-danger"
+                                *ngIf="notaForm.get('paralelo')?.hasError('required') && notaForm.get('paralelo')?.touched">
+                                <span>el paralelo del estudiante es <strong>obligatorio</strong>   </span>
+                            </div>
+                        </div>  
+                        <div class="mb-3">
+                            <input type="text" formControlName="materia"
+                            class="form-control form-control-lg" placeholder="materia">
+                            <div class="text-danger"
+                                *ngIf="notaForm.get('materia')?.hasError('required') && notaForm.get('materia')?.touched">
+                                <span>la materia del estudiante es <strong>obligatorio</strong>   </span>
+                            </div>
+                        </div>  
+                        <div class="mb-3">
+                            <input type="text" formControlName="nota1"
+                            class="form-control form-control-lg" placeholder="NOTA1">
+                            <div class="text-danger"
+                                *ngIf="notaForm.get('nota1')?.hasError('required') && notaForm.get('nota1')?.touched">
+                                <span>la nota 1<strong>obligatorio</strong>   </span>
+                            </div>
+                        </div>  
+                        <div class="mb-3">
+                            <input type="text" formControlName="nota2"
+                            class="form-control form-control-lg" placeholder="NOTA2">
+                            <div class="text-danger"
+                                *ngIf="notaForm.get('nota2')?.hasError('required') && notaForm.get('nota2')?.touched">
+                                <span>la nota 2<strong>obligatorio</strong>   </span>
+                            </div>
+                        </div>  
+                        <div class="mb-3">
+                            <input type="text" formControlName="nota3"
+                            class="form-control form-control-lg" placeholder="NOTA3">
+                            <div class="text-danger"
+                                *ngIf="notaForm.get('nota3')?.hasError('required') && notaForm.get('nota3')?.touched">
+                                <span>la nota 3<strong>obligatorio</strong>   </span>
+                            </div>
+                        </div>  
+                        <div class="mb-3">
+                            <input type="text" formControlName="notaP"
+                            class="form-control form-control-lg" placeholder="NOTAP">
+                            <div class="text-danger"
+                                *ngIf="notaForm.get('notaP')?.hasError('required') && notaForm.get('notaP')?.touched">
+                                <span>la nota Parcial <strong>obligatorio</strong>   </span>
+                            </div>
+                        </div>  
+                        <div class="mb-3">
+                            <input type="text" formControlName="notaF"
+                            class="form-control form-control-lg" placeholder="NOTAF">
+                            <div class="text-danger"
+                                *ngIf="notaForm.get('notaF')?.hasError('required') && notaForm.get('notaF')?.touched">
+                                <span>la nota Final<strong>obligatorio</strong>   </span>
+                            </div>
+                        </div>  
+                        <div class="mb-3">
+                            <button  class="btn btn-secondary btn-lg float-start" routerLink="/">volver</button>
+                            
+                            <button type="submit" [disabled]="notaForm.invalid" class="btn btn-success btn-lg float-end">aceptar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

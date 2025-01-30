@@ -1,0 +1,6 @@
+para crear el servidor 
+- npm init
+-npm install -D nodemon//se crea uns ervidor de desarrollo
+- npm install express mongoose dotenv
+para correr el servidor 
+- npm run dev
