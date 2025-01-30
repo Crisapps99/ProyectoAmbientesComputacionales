@@ -15,9 +15,9 @@
    
         <div class="col-lg-10 offset-lg-2">
             <div class="card">
-                <div class="card-body text-center">
-                    <span class="titulo">listado de Notas Generales</span>
-                    <table *ngIf="listOrdenadasPorNombre.length > 0" class="table table-striped table-group-divider mt-3">
+                <div class="card-body text-center scrollable-table">
+                    <span class="titulo">Notas Generales</span>
+                    <table *ngIf="listOrdenadasPorNombre.length > 0" class="table table-striped table-bordered" >
                         <thead>
                           <tr>
                             <th scope="col">Nombre</th>
@@ -30,7 +30,7 @@
                           </tr>
                         </thead>
                         <tbody>
-                            <tr *ngFor="let Notas of listOrdenadasPorNombre">
+                            <tr *ngFor="let Notas of listOrdenadasPorNombre" (click)="irAListarNotas()"  >
                                 <td>{{Notas.nombre}}</td>
                                 <td>{{Notas.materia}}</td>
                                 <td>{{Notas.nota1}}</td>
@@ -51,9 +51,9 @@
    
     <div class="col-lg-5 offset-lg-2">
         <div class="card">
-            <div class="card-body text-center">
+            <div class="card-body text-center scrollable-table">
                 <span class="titulo">listado de Notas Generales</span>
-                <table *ngIf="listOrdenadasPorParalelo.length > 0" class="table table-striped table-group-divider mt-3">
+                <table *ngIf="listOrdenadasPorParalelo.length > 0" class="table table-striped table-bordered">
                     <thead>
                       <tr>
                         <th scope="col">Nombre</th>
@@ -62,7 +62,7 @@
                       </tr>
                     </thead>
                     <tbody>
-                        <tr *ngFor="let Notas of listOrdenadasPorParalelo">
+                        <tr *ngFor="let Notas of listOrdenadasPorParalelo" (click)="irAListarNotas()" >
                             <td>{{Notas.nombre}}</td>
                             <td>{{Notas.curso}}</td>
                             <td>{{Notas.paralelo}}</td>

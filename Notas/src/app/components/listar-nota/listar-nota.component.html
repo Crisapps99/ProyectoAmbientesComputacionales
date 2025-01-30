@@ -5,8 +5,8 @@
             <div class="card">
                 <div class="card-body text-center">
                     <span class="titulo">listado de Notas</span>
+                    <button class="btn btn-success float-end " routerLink="/crear-nota">Agregar nueva Nota </button>
                     <input type="text" class="form-control mb-3" placeholder="buscar por estudiante" [(ngModel)]="searchText">
-                    <button class="btn btn-success float-end" routerLink="/crear-nota">nuevo </button>
                     <table *ngIf="listNotas.length > 0" class="table table-striped table-bordered ">
                         <thead>
                           <tr>

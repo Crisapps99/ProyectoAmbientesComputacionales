@@ -53,6 +53,48 @@ body, html{
     text-transform: uppercase;
     text-align: center;
     font-size: 13px;
+    overflow-y: auto;
+    max-height: 150px;
 
 }
+.boton-registrar{
+    color: #000000;
+}
 
+.btn-success {
+    background-color: #007bff !important;
+    margin-bottom: 10px;
+}
+
+.mb-3 input{
+    width: 100%;
+    height: 35px;
+}
+input[type="text"][formControlName="nota1"] {
+    width: 25%;
+}
+input[type="text"][formControlName="nota2"] {
+    width: 25%;
+}input[type="text"][formControlName="nota3"] {
+    width: 25%;
+}input[type="text"][formControlName="notaP"] {
+    width: 25%;
+}input[type="text"][formControlName="notaF"] {
+    width: 25%;
+}input[type="text"][formControlName="curso"] {
+    width: 25%;
+}
+.for{
+    background-color: #a7cdf7;
+    width: 30%;
+    box-shadow: 10px 0px 5px rgba(0,0,0,0.3);
+    margin-left: 100px;
+    margin-top: 50px;
+    border-radius: 20px;
+    margin-bottom: 100px;
+}
+table tr:hover {
+    cursor: pointer;
+    transform: scale(1.02);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6); /* Agrega una sombra */
+  }

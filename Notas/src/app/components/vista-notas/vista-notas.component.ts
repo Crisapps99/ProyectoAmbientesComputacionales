@@ -3,6 +3,7 @@ import { NotaService } from '../../services/nota.service';
 
 import { Nota } from '../../models/nota';
 import { ToastrService } from 'ngx-toastr';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-vista-notas',
@@ -17,11 +18,16 @@ export class VistaNotasComponent implements OnInit {
   listOrdenadasPorParalelo:Nota[] = [];
 
     constructor(private _notaService:NotaService,
-        private toastr: ToastrService
+        private toastr: ToastrService,
+        private router:Router
       ){}
       ngOnInit():void{
         this.obtenerNota();
       }
+
+      irAListarNotas() {
+        this.router.navigate(['/listar-nota']); 
+    }
       obtenerNota(){
         this._notaService.getNotas().subscribe(data=>{
           console.log(data);
