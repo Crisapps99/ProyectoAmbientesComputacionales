@@ -15,7 +15,7 @@ import { error } from 'console';
 export class CrearNotaComponent implements OnInit {
 
   notaForm: FormGroup;
-  titulo = 'Crear Nota'
+  titulo = 'Agregar Nueva Nota'
   id:string|null;
 
   constructor(private fb:FormBuilder,

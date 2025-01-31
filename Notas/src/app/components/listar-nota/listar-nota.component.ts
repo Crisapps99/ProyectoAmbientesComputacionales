@@ -40,12 +40,18 @@ selectedNota: any = {};
   }
 
   eliminarNota(id:any){
-    this._notaService.eliminarNota(id).subscribe(data=>{
-      this.toastr.error('La nota fue eliminada con exito','nota eliminada');
-      this.obtenerNota();
-    },error =>{
-      console.log(error)
-    })
+    const confirmacion= window.confirm('estas seguro que deseas eliminar');
+    if(confirmacion){
+      this._notaService.eliminarNota(id).subscribe(
+        data=>{
+          this.toastr.error('La nota fue eliminada con éxito', 'Nota eliminada');
+          this.obtenerNota();
+        },
+        error=>{
+          console.log(error)
+        }
+      )
+    }
   }
 
  //metodo para calcular las notas
