@@ -23,7 +23,7 @@ import { FilterPipe } from './components/listar-nota/filter.pipe';
     ListarNotaComponent,
     VistaNotasComponent,
     NavbarComponent,
-    FilterPipe
+    FilterPipe,
   ],
   imports: [
     BrowserModule,

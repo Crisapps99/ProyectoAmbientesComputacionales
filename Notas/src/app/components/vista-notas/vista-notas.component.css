@@ -9,8 +9,6 @@
     align-items: center;
     box-shadow: 0 0px  20px rgba(0, 0, 0, 0.6); /* Agrega una sombra */
     border-radius: 20px;
-    margin-left: 20px;
-
 }
 .card-title{
     text-align: center;
@@ -28,7 +26,6 @@
     height: 400px;
 }
 .bodys{
-    background-image: url(/Proyecto/Notas/src/assets/bmw___ford_mustang-wallpaper-1920x1080.jpg);
     align-items: start;
     margin-top: 40px;
     padding-top: 40px;

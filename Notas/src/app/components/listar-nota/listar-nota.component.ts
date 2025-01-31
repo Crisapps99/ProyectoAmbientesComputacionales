@@ -3,6 +3,7 @@ import { NotaService } from '../../services/nota.service';
 import { Nota } from '../../models/nota';
 import { ToastrService } from 'ngx-toastr';
 import { FilterPipe } from './filter.pipe';
+import { ActivatedRoute } from '@angular/router';
 
 
 @Component({
@@ -16,10 +17,13 @@ import { FilterPipe } from './filter.pipe';
 export class ListarNotaComponent implements OnInit{
 listNotas:Nota[] = [];
 searchText:string='';
+selectedNota: any = {};
 
 
   constructor(private _notaService:NotaService,
-    private toastr: ToastrService
+    private toastr: ToastrService,
+    private route: ActivatedRoute,
+    
   ){}
   ngOnInit():void{
     this.obtenerNota();

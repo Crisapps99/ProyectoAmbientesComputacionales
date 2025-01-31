@@ -15,7 +15,7 @@ import { Router } from '@angular/router';
 export class VistaNotasComponent implements OnInit {
   listNotas:Nota[] = [];
   listOrdenadasPorNombre: Nota[] = [];
-  listOrdenadasPorParalelo:Nota[] = [];
+  searchText:string='';
 
     constructor(private _notaService:NotaService,
         private toastr: ToastrService,
@@ -25,9 +25,7 @@ export class VistaNotasComponent implements OnInit {
         this.obtenerNota();
       }
 
-      irAListarNotas() {
-        this.router.navigate(['/listar-nota']); 
-    }
+    
       obtenerNota(){
         this._notaService.getNotas().subscribe(data=>{
           console.log(data);
@@ -36,26 +34,13 @@ export class VistaNotasComponent implements OnInit {
           this.listOrdenadasPorNombre = [ ... this.listNotas];
           this.ordenarPorNombre();
 
-          this.listOrdenadasPorParalelo = [...this.listNotas]; 
-          this.ordenarPorParalelo();
+         
         }, error =>{
           console.log(error);
         })
       }
 
-      ordenarPorParalelo(){
-        this.listOrdenadasPorParalelo.sort((a,b)=>{
-          const paraleloA = a.paralelo.toLocaleLowerCase();
-          const paraleloB = b.paralelo.toLocaleLowerCase();
-          if(paraleloA < paraleloB){
-            return -1; // debe ir antes que b
-          }
-          if(paraleloA>paraleloB){
-            return 1 ; //a debe ir despues que b
-          }
-          return 0;// a y b son iguales
-        });
-      }
+     
         ordenarPorNombre(){
           this.listOrdenadasPorNombre.sort((a,b)=>{
             const nombreA = a.nombre.toLocaleLowerCase();

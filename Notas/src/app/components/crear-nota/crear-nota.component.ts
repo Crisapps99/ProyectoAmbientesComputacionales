@@ -57,7 +57,7 @@ export class CrearNotaComponent implements OnInit {
       //editamos la nota
       this._notaService.editarNota(this.id,NOTA).subscribe(data=>{
         this.toastr.success('La nota fue actualizado con exito!', 'La Nota actualizada!');
-        this.router.navigate(['/']);
+        this.router.navigate(['/listar-nota']);
       }, error=>{
         console.log(error);
         this.notaForm.reset();
@@ -67,7 +67,7 @@ export class CrearNotaComponent implements OnInit {
       console.log(NOTA);
     this._notaService.guardarNota(NOTA).subscribe(data=>{
       this.toastr.success('La nota fue registrado con exito!', 'La Nota Registrado fun!');
-      this.router.navigate(['/']);
+      this.router.navigate(['/listar-nota']);
     }, error=>{
       console.log(error);
       this.notaForm.reset();
