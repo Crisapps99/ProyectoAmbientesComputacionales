@@ -12,7 +12,7 @@ body, html{
     font-size: 1.5rem;
     text-align: center;
     text-transform: uppercase;
-    font-size: 40px;
+    font-size: 30px;
 }
 .navbar {
     background-color: rgba(255, 255, 255, 0.1); /* Transparente */
@@ -40,7 +40,8 @@ body, html{
 }
 .card-body{
     background-color: #badddd;
-   
+    width: 105%;
+
 }
 
 .table-bordered thead th { 
@@ -49,10 +50,11 @@ body, html{
     text-transform: uppercase;
     font-size: 13px;
 }
+
 .table-bordered td{
     text-transform: uppercase;
     text-align: center;
-    font-size: 13px;
+    font-size: 12px;
     overflow-y: auto;
     max-height: 150px;
 
@@ -97,4 +99,14 @@ table tr:hover {
     cursor: pointer;
     transform: scale(1.02);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6); /* Agrega una sombra */
-  }
+}
+
+.scrollable-table {
+    max-height: 300px; /* Ajusta la altura según necesites */
+    overflow-y: auto; /* Agrega scroll vertical si es necesario */
+    display: block;
+}
+
+.scrollable-table table {
+    width: 100%; /* Asegura que la tabla ocupe todo el contenedor */
+}

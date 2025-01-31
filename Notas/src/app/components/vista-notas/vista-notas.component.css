@@ -1,0 +1,39 @@
+.fa-user{
+    font-size: 100px;
+    margin-left: 0px;
+}
+.card-custom{
+    margin-top: 40px;
+    width: 17rem;
+    height: 20rem;
+    align-items: center;
+    box-shadow: 0 0px  20px rgba(0, 0, 0, 0.6); /* Agrega una sombra */
+    border-radius: 20px;
+    margin-left: 20px;
+
+}
+.card-title{
+    text-align: center;
+}
+.card-edit{
+    border-radius: 20px;
+    background-color: rgb(172, 207, 196);
+    width: 100%;
+}
+.mi-contenedor{
+    background-color: yellow;
+    width: 50%;
+    margin-right: 30px;
+    margin-top: 0px;
+    height: 400px;
+}
+.bodys{
+    background-image: url(/Proyecto/Notas/src/assets/bmw___ford_mustang-wallpaper-1920x1080.jpg);
+    align-items: start;
+    margin-top: 40px;
+    padding-top: 40px;
+    }
+.card-lista{
+    background-color: blueviolet;
+   
+}
